@@ -1,0 +1,24 @@
+name: 'WooCart Deploy'
+description: 'Deploy changes from your GitHUb repository to your store.'
+inputs:
+  url:
+    description: 'WEBDAV url'
+    required: true
+  username:
+    description: 'WEBDAV user'
+    required: true
+  password:
+    description: 'WEBDAV password'
+    required: true
+  local:
+    description: 'Local directory'
+    required: true
+  remote:
+    description: 'Remote directory'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  color: 'purple'
+  icon: 'upload-cloud'
